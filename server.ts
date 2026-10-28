@@ -1,4 +1,5 @@
-import express, { Request, Response } from 'express';
+import express from 'express';
+import type { Request, Response } from 'express';
 import dotenv from 'dotenv';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -33,10 +34,11 @@ if (process.env.GEMINI_API_KEY) {
 }
 
 // 1. Health & Status
-app.get('/api/status', (_req: Request, res: Response) => {
-  res.json({
+app.get(['/health', '/api/health', '/api/status'], (_req: Request, res: Response) => {
+  res.status(200).json({
     status: 'ok',
     app: 'StoryForge AI',
+    timestamp: new Date().toISOString(),
     geminiConfigured: !!process.env.GEMINI_API_KEY,
   });
 });

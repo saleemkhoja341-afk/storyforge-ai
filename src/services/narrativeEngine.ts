@@ -1,4 +1,4 @@
-import { Project, Episode, Scene, Character, Language, VisualStyle, AspectRatio } from '../types';
+import type { Project, Episode, Scene, Character, Language, VisualStyle, AspectRatio } from '../types.ts';
 
 interface GenerateStoryInput {
   title?: string;
