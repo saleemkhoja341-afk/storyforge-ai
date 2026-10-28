@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Cinzel', serif;
+  --font-urdu: 'Noto Nastaliq Urdu', serif;
+  --font-hindi: 'Noto Sans Devanagari', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #08090e;
+}
+::-webkit-scrollbar-thumb {
+  background: #23273d;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8b5cf6;
+}
+
+.glass-card {
+  background: rgba(20, 23, 36, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card-hover {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-card-hover:hover {
+  border-color: rgba(139, 92, 246, 0.45);
+  box-shadow: 0 10px 30px -10px rgba(139, 92, 246, 0.2);
+  transform: translateY(-2px);
+}
+
+.glow-accent {
+  box-shadow: 0 0 25px -4px rgba(139, 92, 246, 0.35);
+}
+
+.rtl-text {
+  direction: rtl;
+  font-family: 'Noto Nastaliq Urdu', serif;
+  line-height: 2.2;
+}
+
+.hindi-text {
+  font-family: 'Noto Sans Devanagari', sans-serif;
+}
